@@ -14,7 +14,7 @@ Follow the steps below to configure and start the Triton Inference Server on you
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 
-git clone [<repository_url>](https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main)https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main
+git clone (https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main)https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main
 cd Triton-Inference-Server-Deployment-with-ONNX-Models 
 
 ### Step 2: Set up the Model Repository
