@@ -14,17 +14,16 @@ Follow the steps below to configure and start the Triton Inference Server on you
 ### Step 1: Clone the Repository
 Clone this repository to your local machine:
 
-git clone https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main
-then
+* git clone https://github.com/tamanna18/Triton-Inference-Server-Deployment-with-ONNX-Models/tree/main
 
-cd Triton-Inference-Server-Deployment-with-ONNX-Models 
+* cd Triton-Inference-Server-Deployment-with-ONNX-Models 
 
 ### Step 2: Set up the Model Repository
 The Triton Inference Server requires a model repository where your models will be stored. In this repository, we will use the /models directory as the model repository.
 
 Replace <model_repository_path> with the absolute path to your desired model repository directory in the following command:
 
-docker run --rm -p 8000:8000 --name triton-server-container -v "<model_repository_path>:/models" nvcr.io/nvidia/tritonserver:21.06-py3 bash
+* docker run --rm -p 8000:8000 --name triton-server-container -v "<model_repository_path>:/models" nvcr.io/nvidia/tritonserver:21.06-py3 bash
 
 
 This command starts a Docker container and mounts the model repository directory to the /models directory within the container.
@@ -33,7 +32,7 @@ This command starts a Docker container and mounts the model repository directory
 ### Step 3: Start the Triton Inference Server
 Inside the Docker container, run the following command to start the Triton Inference Server:
 
-tritonserver --model-repository=/models
+* tritonserver --model-repository=/models
 
 The server will start and display log output indicating the initialization of different backends (PyTorch, TensorFlow, ONNX Runtime, etc.). Note any warnings or errors that may occur during startup.
 
@@ -41,7 +40,7 @@ The server will start and display log output indicating the initialization of di
 ### Step 4: Test the Server
 To test if the Triton Inference Server is running successfully, open a new terminal window and run the following command:
 
-curl -v http://localhost:8000/v2/models
+* curl -v http://localhost:8000/v2/models
 
 You should receive a response containing information about the available models in the model repository
 
